@@ -1,0 +1,55 @@
+/* 
+ * File:   main.cpp
+ * Author: Omar Kaayal
+ *
+ * Created on July 7, 2015, 3:54 PM
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+/*
+ * 
+ */
+int main(int argc, char** argv) {
+    //variables
+    int Adult_ticket_sold, Kid_ticket_sold;
+    float Gross_profit, Net_profit, Distributor_ammount;
+    string movie_name;  
+    //read input from user
+    getline (cin, movie_name);
+    
+    cout << "total Adult tickets sold: ";
+    cin >> Adult_ticket_sold;
+    
+    cout << "total Kid tickets sold: ";
+    cin >> Kid_ticket_sold;
+    
+    //calculate Gross profit
+    Gross_profit = (Adult_ticket_sold * 6 + Kid_ticket_sold * 3);
+    
+    //calculate Net profit
+    Net_profit = (Gross_profit * 0.20);
+    
+    //calculate Distributor amount
+    Distributor_ammount = (Gross_profit - Net_profit);
+    
+    //Display
+    cout << "\n Movie Name:             "<< setw(6) << movie_name;
+    cout << "\n Adult tickets:             "<< setw(6) << Adult_ticket_sold;
+    cout << "\n Kid Tickets:             "<< setw(6) << Kid_ticket_sold;
+    cout << "\n Gross Profit:            $ "<< fixed << setprecision(2) << setw(6) << Gross_profit;
+    cout << "\n Distributor Amount:             "<< setw(6) << fixed << setprecision(2) << Distributor_ammount;
+    cout << "\n Net Profit:             "<< setw(6) << fixed << setprecision(2) << Net_profit;
+    
+    
+    
+    
+
+    return 0;
+}
+

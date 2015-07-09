@@ -1,0 +1,48 @@
+/* 
+ * File:   main.cpp
+ * Author: Omar Kaayal
+ *
+ * Created on July 7, 2015, 8:43 PM
+ */
+//System Libraries
+#include <iostream> //I/O Library
+#include <cstdlib>
+#include <stdio.h>
+using namespace std;//Namespace for iostream
+
+//User Libraries
+
+//Global Constants
+
+//Function Prototypes
+
+//Execution Begins Here!
+int main(int argc, char** argv) {
+   
+ //Declare and Initialize Variables
+    int cookies_held_per_bag = 40;
+    int serving_per_bag = 10;
+    float cal_per_serving = 300;
+    float cookies_per_serving;
+    float cal_per_cookie;
+    float eaten;
+    float total_cal_consumed;
+    
+    //input by user
+    cout << "Number of Cookies eaten: " <<endl;
+    cin >> eaten;
+    
+    //calculate
+    cookies_per_serving = cookies_held_per_bag / serving_per_bag; //cookies per serving
+    
+    cal_per_cookie = cal_per_serving / cookies_per_serving; //calorie per cookie
+    
+    total_cal_consumed = eaten * cal_per_cookie;
+    
+    //Display
+    cout << "Total consumption = " << total_cal_consumed << "calories" <<endl;
+            
+   
+ 
+	return 0;
+}
